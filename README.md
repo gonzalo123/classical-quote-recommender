@@ -120,6 +120,60 @@ So before the selector sees the candidates, the reranker extracts a compact quot
 
 That small layer makes a big difference. It biases the output toward something you can actually use without turning your message into a wall of text.
 
+## Representative Examples
+
+Here are two representative examples of the kind of output the system is designed to produce.
+
+### Example 1
+
+**Input**
+
+> Thanks for your feedback. I do not fully agree with the proposal, but I think we can still find a middle ground and move forward.
+
+**Analysis**
+
+- Summary: Polite disagreement looking for a workable compromise
+- Main theme: Negotiation
+- Tone: Conciliatory
+- Intent: Negotiate
+- Dominant emotion: Controlled tension
+
+**Recommended quote**
+
+> But now let each becalm his troubled breast,  
+> Wash, and partake serene the friendly feast.
+
+Homer, *The Odyssey*, section 398
+
+**Why it fits**
+
+It cools the temperature without sounding weak. The quote shifts the message away from friction and toward calm, shared ground, and continued conversation.
+
+### Example 2
+
+**Input**
+
+> We need to stay focused, make a decision, and keep moving even if the road is rough.
+
+**Analysis**
+
+- Summary: Call for disciplined action under pressure
+- Main theme: Leadership
+- Tone: Resolute
+- Intent: Persuade
+- Dominant emotion: Focus
+
+**Recommended quote**
+
+> In battle calm he guides the rapid storm,  
+> Wise to resolve, and patient to perform.
+
+Homer, *The Odyssey*, section 406
+
+**Why it fits**
+
+It is short, memorable, and action-oriented. The line matches a message that asks for composure, judgment, and forward motion at the same time.
+
 ## Bedrock as the Language Brain
 
 Language detection, rhetorical analysis, quote selection, and translation all go through AWS Bedrock (running Claude Sonnet 4). I tried a local language detector first, but short real-world messages are messy: mixed languages, ticket IDs, URLs, corporate jargon. Bedrock handles that ambiguity much better and keeps the pipeline simpler.
