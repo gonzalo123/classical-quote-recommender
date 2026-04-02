@@ -226,4 +226,4 @@ The idea: each word gets hashed to a position and a direction in the vector. The
 
 ## Source code
 
-Full source code available in my [GitHub repository](https://github.com/gonzalo123/nico).
+Full source code available in my [GitHub repository](https://github.com/gonzalo123/classical-quote-recommender).
