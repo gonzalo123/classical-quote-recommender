@@ -143,7 +143,7 @@ Here are two representative examples of the kind of output the system is designe
 > But now let each becalm his troubled breast,  
 > Wash, and partake serene the friendly feast.
 
-Homer, *The Odyssey*, section 398
+Homer, *The Odyssey*
 
 **Why it fits**
 
@@ -168,7 +168,7 @@ It cools the temperature without sounding weak. The quote shifts the message awa
 > In battle calm he guides the rapid storm,  
 > Wise to resolve, and patient to perform.
 
-Homer, *The Odyssey*, section 406
+Homer, *The Odyssey*
 
 **Why it fits**
 

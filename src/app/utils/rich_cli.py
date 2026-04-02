@@ -14,6 +14,15 @@ from settings import APP_ENV
 console = Console()
 
 
+def _display_reference(reference: str) -> str:
+    """Hide internal section references from the public CLI output."""
+
+    cleaned = reference.strip()
+    if cleaned.lower().startswith("section "):
+        return ""
+    return cleaned
+
+
 def print_cli_header() -> None:
     """Render a small branded header for the CLI."""
 
@@ -74,7 +83,11 @@ def _quote_panel(title: str, border_style: str, quote) -> Panel:
     if quote.translated_text.strip() != quote.text.strip():
         body.append("Translated quote\n", style="bold green")
         body.append(f"{quote.translated_text}\n\n", style="white")
-    body.append(f"{quote.author} · {quote.work} · {quote.reference}\n", style="cyan")
+    source_label = f"{quote.author} · {quote.work}"
+    reference = _display_reference(quote.reference)
+    if reference:
+        source_label = f"{source_label} · {reference}"
+    body.append(f"{source_label}\n", style="cyan")
     body.append(f"Score: {quote.score:.4f}\n", style="magenta")
     body.append(f"Why it fits: {quote.why_it_fits}", style="green")
     return Panel(body, title=title, border_style=border_style)
