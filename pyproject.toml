@@ -1,0 +1,45 @@
+[project]
+name = "classical-quote-recommender"
+version = "0.1.0"
+description = "A rhetorical classical quote recommender PoC for short emails and messages."
+readme = "README.md"
+requires-python = ">=3.12,<4.0"
+dynamic = ["dependencies"]
+authors = [{ name = "Gonzalo Ayuso" }]
+
+[project.scripts]
+classical-quotes = "cli:cli"
+
+[tool.poetry]
+packages = [
+  { include = "app", from = "src" },
+  { include = "commands", from = "src" }
+]
+include = ["src/cli.py"]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+click = "^8.1.8"
+fastapi = "^0.115.12"
+httpx = "^0.28.1"
+numpy = "^2.2.4"
+boto3 = "^1.37.38"
+pydantic = "^2.11.3"
+pydantic-settings = "^2.8.1"
+python-dotenv = "^1.1.0"
+rapidfuzz = "^3.13.0"
+rich = "^14.0.0"
+sentence-transformers = "^4.1.0"
+strands-agents = { version = "^1.21.0", extras = ["openai"] }
+uvicorn = { version = "^0.34.0", extras = ["standard"] }
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.5"
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+
+[build-system]
+requires = ["poetry-core>=1.9.0"]
+build-backend = "poetry.core.masonry.api"
