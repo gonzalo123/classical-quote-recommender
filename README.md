@@ -2,6 +2,8 @@
 
 What if every email you write could carry the rhetorical weight of Homer? Not as a gimmick, as a real tool that understands the tone, intent, and emotion of your message and finds the classical passage that fits.
 
+![nico](img/image.png)
+
 That's the idea behind this PoC: a system that takes a short text (an email, a Slack message, a reply to a tricky thread) and recommends the most fitting quote from classical literature. Right now the corpus is the Iliad and the Odyssey, nearly 5,000 passages of Homer, indexed and searchable by meaning, not just by keywords.
 
 The interesting part isn't the concept. It's how the pieces fit together.
